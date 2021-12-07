@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tiet_forum/views/post_query.dart';
+import 'package:tiet_forum/views/post_answer.dart';
 import 'package:tiet_forum/widgets/solution_tile.dart';
 
 class ForumQuery extends StatefulWidget {
@@ -30,7 +30,10 @@ class _ForumQueryState extends State<ForumQuery> {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => PostQuery()),
+              MaterialPageRoute(
+                builder: (context) =>
+                    PostAnswer(widget.forumQueryData.question),
+              ),
             );
           },
           child: Icon(Icons.add),

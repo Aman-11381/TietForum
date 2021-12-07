@@ -52,6 +52,5 @@ class SolutionTile extends StatelessWidget {
         ],
       ),
     );
-    ;
   }
 }
