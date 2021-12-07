@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tiet_forum/data/forum_data.dart';
+import 'package:tiet_forum/views/post_query.dart';
 
 class ForumPage extends StatefulWidget {
   const ForumPage({Key? key}) : super(key: key);
@@ -41,6 +42,15 @@ class _ForumPageState extends State<ForumPage> {
               )
             ],
           ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => PostQuery()),
+            );
+          },
+          child: Icon(Icons.add),
         ),
         body: SingleChildScrollView(
             child: Padding(
